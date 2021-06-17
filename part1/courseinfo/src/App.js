@@ -1,5 +1,12 @@
 import React from "react";
 //Header, Content, and Total.
+const course = "Half Stack application development";
+const part1 = "Fundamentals of React";
+const exercises1 = 10;
+const part2 = "Using props to pass data";
+const exercises2 = 7;
+const part3 = "State of a component";
+const exercises3 = 14;
 const Header = (props) => {
   return (
     <>
@@ -7,12 +14,19 @@ const Header = (props) => {
     </>
   );
 };
+const Part=(props)=>{
+  return(
+    <>
+        <p>{props.parts} {props.exercises} </p>
+    </>
+  )
+}
 const Content = (props) => {
   return (
     <>
-      <p>
-        {props.parts} {props.exercises}
-      </p>
+      < Part parts={part1} exercises ={exercises1}/>
+      < Part parts={part2} exercises ={exercises2}/>
+      < Part parts={part3} exercises ={exercises3}/> 
     </>
   );
 };
@@ -25,19 +39,11 @@ const Total = (props) => {
   );
 };
 const App = () => {
-  const course = "Half Stack application development";
-  const part1 = "Fundamentals of React";
-  const exercises1 = 10;
-  const part2 = "Using props to pass data";
-  const exercises2 = 7;
-  const part3 = "State of a component";
-  const exercises3 = 14;
+ 
   return (
     <>
       <Header course={course} />
-      <Content parts={part1} exercises={exercises1} />
-      <Content parts={part2} exercises={exercises2} />
-      <Content parts={part3} exercises={exercises3} />
+       <Content/>
       <Total total={exercises1 + exercises2 + exercises3} />
     </>
   );
