@@ -1,4 +1,5 @@
 import React from "react";
+
 //Header, Content, and Total.
 
 const Header = (props) => {
@@ -50,13 +51,16 @@ const App = () => {
  
 
   return (
-    <>
+    < div className='main'>
+      <div className='primary'>
       <Header course={course} />
       <Content
        parts={course.parts}
       />
       <Total parts={course.parts} />
-    </>
+      </div>
+     
+    </div>
   );
 };
 export default App;
