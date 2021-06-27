@@ -45,17 +45,17 @@ const maxData=findMaxVotesIndex(selected.data)
   return (
     <div className="main">
       <div className="primary">
-      <h3>Anecdoted of the day</h3>
-        <p>{selected.data[selected.index].text}</p>
+      <h2 >Anecdoted of the day</h2>
+        <p className='txt'>{selected.data[selected.index].text}</p>
         <div>
          
-          <p>has <strong style={{color:"brown",fontSize:"20px"}}>{selected.data[selected.index].votes}</strong>  votes</p>
+          <p>has <strong style={{color:"white",fontSize:"20px"}}>{selected.data[selected.index].votes}</strong>  votes</p>
         </div>{" "}
         <button onClick={()=>voteHandleClick()}>Vote this anecdotes </button>
         <button onClick={()=> handleClick()}>Next anecdotes</button>
-        <h3>Anecdoted with most Votes</h3>
-        <p>{maxData.text}</p>
-        <p> has <strong style={{color:"brown",fontSize:"20px"}}>{maxData.votes} Votes</strong></p>
+        <h2 >Anecdoted with most Votes</h2>
+        <p className='txt'>{maxData.text}</p>
+        <p> has <strong style={{color:"white",fontSize:"20px"}}>{maxData.votes} </strong>votes</p>
           
       </div>
     </div>
